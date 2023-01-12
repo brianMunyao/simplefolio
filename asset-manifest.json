@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/simplefolio/static/css/main.073c9b0a.css",
-    "main.js": "/simplefolio/static/js/main.23ddd75e.js",
+    "main.js": "/simplefolio/static/js/main.10586861.js",
     "static/js/787.09ceaf3e.chunk.js": "/simplefolio/static/js/787.09ceaf3e.chunk.js",
-    "static/media/logo.svg": "/simplefolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/simplefolio/index.html",
     "main.073c9b0a.css.map": "/simplefolio/static/css/main.073c9b0a.css.map",
-    "main.23ddd75e.js.map": "/simplefolio/static/js/main.23ddd75e.js.map",
+    "main.10586861.js.map": "/simplefolio/static/js/main.10586861.js.map",
     "787.09ceaf3e.chunk.js.map": "/simplefolio/static/js/787.09ceaf3e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.23ddd75e.js"
+    "static/js/main.10586861.js"
   ]
 }
