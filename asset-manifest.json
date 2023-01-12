@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/simplefolio/static/css/main.073c9b0a.css",
-    "main.js": "/simplefolio/static/js/main.10586861.js",
+    "main.css": "/simplefolio/static/css/main.9fa074fe.css",
+    "main.js": "/simplefolio/static/js/main.d33f0f79.js",
     "static/js/787.09ceaf3e.chunk.js": "/simplefolio/static/js/787.09ceaf3e.chunk.js",
     "index.html": "/simplefolio/index.html",
-    "main.073c9b0a.css.map": "/simplefolio/static/css/main.073c9b0a.css.map",
-    "main.10586861.js.map": "/simplefolio/static/js/main.10586861.js.map",
+    "main.9fa074fe.css.map": "/simplefolio/static/css/main.9fa074fe.css.map",
+    "main.d33f0f79.js.map": "/simplefolio/static/js/main.d33f0f79.js.map",
     "787.09ceaf3e.chunk.js.map": "/simplefolio/static/js/787.09ceaf3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.10586861.js"
+    "static/css/main.9fa074fe.css",
+    "static/js/main.d33f0f79.js"
   ]
 }
