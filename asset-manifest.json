@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/simplefolio/static/css/main.f3e78f16.css",
-    "main.js": "/simplefolio/static/js/main.b0a7f764.js",
+    "main.js": "/simplefolio/static/js/main.20d4f7b0.js",
     "static/js/787.09ceaf3e.chunk.js": "/simplefolio/static/js/787.09ceaf3e.chunk.js",
-    "static/media/me.jpg": "/simplefolio/static/media/me.3273bee8b6204304ec61.jpg",
-    "static/media/background.jpg": "/simplefolio/static/media/background.048f61ec14221bf18f93.jpg",
+    "static/media/me.jpg": "/simplefolio/static/media/me.645c88eb7bdfe99e1192.jpg",
+    "static/media/background.jpg": "/simplefolio/static/media/background.f4294fdd55a2068a76e6.jpg",
     "index.html": "/simplefolio/index.html",
     "main.f3e78f16.css.map": "/simplefolio/static/css/main.f3e78f16.css.map",
-    "main.b0a7f764.js.map": "/simplefolio/static/js/main.b0a7f764.js.map",
+    "main.20d4f7b0.js.map": "/simplefolio/static/js/main.20d4f7b0.js.map",
     "787.09ceaf3e.chunk.js.map": "/simplefolio/static/js/787.09ceaf3e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f3e78f16.css",
-    "static/js/main.b0a7f764.js"
+    "static/js/main.20d4f7b0.js"
   ]
 }
