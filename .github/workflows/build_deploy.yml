@@ -29,9 +29,6 @@ jobs:
           name: production-files
           path: ./build
 
-      - name: Deploy to GitHub Pages
-        run: gh-pages -d build
-
   deploy:
     name: Deploy
     needs: build
