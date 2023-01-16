@@ -29,7 +29,7 @@ import background from './assets/background.jpg';
 import logo_white from './assets/logo_white.png';
 import me from './assets/me.jpg';
 import Skills from './sections/Skills';
-// import Projects from './sections/Projects';
+import Projects from './sections/Projects';
 
 const skills = [
 	{
@@ -160,23 +160,32 @@ const skills = [
 	},
 ];
 
-// const projects = [
-// 	{
-// 		name: 'Freedom - Personal Finance Tracker',
-// 		tags: ['#react-native', '#realm-db'],
-// 		img: require('./assets/freedom.png'),
-// 	},
-// 	{
-// 		name: 'Freedom - Personal Finance Tracker',
-// 		tags: ['#react-native', '#realm-db'],
-// 		img: require('./assets/freedom.png'),
-// 	},
-// 	{
-// 		name: 'Freedom - Personal Finance Tracker',
-// 		tags: ['#react-native', '#realm-db'],
-// 		img: require('./assets/freedom.png'),
-// 	},
-// ];
+const projects = [
+	{
+		name: 'Freedom - Personal Finance Tracker',
+		color: '#3F9569',
+		tags: ['#react-native', '#realm-db'],
+		img: require('./assets/freedom.png'),
+	},
+	{
+		name: 'Stadium Ticket Booking',
+		color: '#ffd700',
+		tags: ['#react', '#flask', '#sqlite'],
+		img: require('./assets/booking.png'),
+	},
+	{
+		name: 'Project Manager',
+		color: '#5c4bff',
+		tags: ['#react', '#mongodb', '#expressjs'],
+		img: require('./assets/pm.png'),
+	},
+	{
+		name: 'Notera - Notes and ToDoList',
+		color: '#4834d4',
+		tags: ['#react-native', '#realm-db'],
+		img: require('./assets/notera.png'),
+	},
+];
 
 const App = () => {
 	const [scrollHeight, setScrollHeight] = useState(0);
@@ -234,7 +243,7 @@ const App = () => {
 
 			<Skills skills={skills} />
 
-			{/* <Projects projects={projects} /> */}
+			<Projects projects={projects} />
 		</Container>
 	);
 };
@@ -256,6 +265,7 @@ const Container = styled.div`
 		background-attachment: fixed;
 		width: 100%;
 		height: 100vh;
+		min-height: 600px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -266,7 +276,6 @@ const Container = styled.div`
 			position: absolute;
 			z-index: 1;
 			top: 0;
-			/* background: red; */
 			width: 100%;
 			padding: 0 30px;
 			display: flex;
@@ -274,7 +283,7 @@ const Container = styled.div`
 			align-items: center;
 
 			img {
-				width: 100px;
+				height: 40%;
 			}
 			.sayhello {
 				border: 2px solid #fff;
@@ -337,7 +346,6 @@ const Container = styled.div`
 		font-weight: 600;
 		letter-spacing: 0.4px;
 		text-align: center;
-		padding: 70px 0 10px;
 	}
 	.subtitle {
 		text-align: center;
@@ -348,6 +356,42 @@ const Container = styled.div`
 		opacity: 0.7;
 		letter-spacing: 0.4px;
 		line-height: 30px;
+	}
+
+	@media (max-width: 470px) {
+		.top-part {
+			.topbar {
+				img {
+					height: 35%;
+				}
+				.sayhello {
+					padding: 10px 25px;
+				}
+			}
+
+			.top-part-content {
+				.me {
+					width: 150px;
+					height: 150px;
+				}
+
+				.name {
+					font-size: 33px;
+				}
+
+				.role {
+					letter-spacing: 0.5px;
+					font-size: 16px;
+					text-align: center;
+				}
+			}
+		}
+		.title {
+			font-size: 35px;
+		}
+		.subtitle {
+			width: 80%;
+		}
 	}
 `;
 

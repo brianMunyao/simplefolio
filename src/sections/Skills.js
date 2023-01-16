@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Skills = ({ skills }) => {
 	return (
 		<Container>
-			<p className="title">Skills and Tools</p>
+			<p className="title s-title">Skills and Tools</p>
 
 			<p className="subtitle">
 				Here are some of the most notable programming languages,
@@ -37,6 +37,8 @@ const Skill = styled.div`
 	align-items: center;
 	justify-content: center;
 	transition: all 0.15s linear;
+	user-select: none;
+
 	svg {
 		margin-right: 6px;
 		font-size: 18px;
@@ -50,6 +52,10 @@ const Skill = styled.div`
 
 const Container = styled.div`
 	margin: 20px 0 70px;
+
+	.s-title {
+		padding: 70px 0 10px;
+	}
 	.skills {
 		width: 70%;
 		margin: 15px auto;
@@ -57,11 +63,9 @@ const Container = styled.div`
 		flex-wrap: wrap;
 		justify-content: center;
 
-		/* white-space: normal;
-			overflow-wrap: break-word; */
-		/* word-wrap: normal; */
-		/* display: grid;
-			grid-template-columns: repeat(auto-fill, 100px); */
+		@media (max-width: 470px) {
+			width: 80%;
+		}
 	}
 `;
 
