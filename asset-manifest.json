@@ -1,18 +1,22 @@
 {
   "files": {
     "main.css": "/simplefolio/static/css/main.f3e78f16.css",
-    "main.js": "/simplefolio/static/js/main.5fa8d5c8.js",
+    "main.js": "/simplefolio/static/js/main.fd6f6b31.js",
     "static/js/787.09ceaf3e.chunk.js": "/simplefolio/static/js/787.09ceaf3e.chunk.js",
+    "static/media/booking.png": "/simplefolio/static/media/booking.e52c14a200debd1500d5.png",
+    "static/media/pm.png": "/simplefolio/static/media/pm.b246bb49592eb021fe44.png",
+    "static/media/freedom.png": "/simplefolio/static/media/freedom.600ba88486642abf0bfe.png",
     "static/media/background.jpg": "/simplefolio/static/media/background.c6d3c8961c3416483a0b.jpg",
     "static/media/me.jpg": "/simplefolio/static/media/me.645c88eb7bdfe99e1192.jpg",
-    "static/media/logo_white.png": "/simplefolio/static/media/logo_white.8935ad5a539b8b59d1ea.png",
+    "static/media/notera.png": "/simplefolio/static/media/notera.36c57a618de476e28182.png",
+    "static/media/logo_white.png": "/simplefolio/static/media/logo_white.0c1f57f0482342667022.png",
     "index.html": "/simplefolio/index.html",
     "main.f3e78f16.css.map": "/simplefolio/static/css/main.f3e78f16.css.map",
-    "main.5fa8d5c8.js.map": "/simplefolio/static/js/main.5fa8d5c8.js.map",
+    "main.fd6f6b31.js.map": "/simplefolio/static/js/main.fd6f6b31.js.map",
     "787.09ceaf3e.chunk.js.map": "/simplefolio/static/js/787.09ceaf3e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f3e78f16.css",
-    "static/js/main.5fa8d5c8.js"
+    "static/js/main.fd6f6b31.js"
   ]
 }
