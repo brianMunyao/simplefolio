@@ -29,7 +29,7 @@ import background from './assets/background.jpg';
 import logo_white from './assets/logo_white.png';
 import me from './assets/me.jpg';
 import Skills from './sections/Skills';
-import Projects from './sections/Projects';
+// import Projects from './sections/Projects';
 
 const skills = [
 	{
@@ -160,23 +160,23 @@ const skills = [
 	},
 ];
 
-const projects = [
-	{
-		name: 'Freedom - Personal Finance Tracker',
-		tags: ['#react-native', '#realm-db'],
-		img: require('./assets/freedom.png'),
-	},
-	{
-		name: 'Freedom - Personal Finance Tracker',
-		tags: ['#react-native', '#realm-db'],
-		img: require('./assets/freedom.png'),
-	},
-	{
-		name: 'Freedom - Personal Finance Tracker',
-		tags: ['#react-native', '#realm-db'],
-		img: require('./assets/freedom.png'),
-	},
-];
+// const projects = [
+// 	{
+// 		name: 'Freedom - Personal Finance Tracker',
+// 		tags: ['#react-native', '#realm-db'],
+// 		img: require('./assets/freedom.png'),
+// 	},
+// 	{
+// 		name: 'Freedom - Personal Finance Tracker',
+// 		tags: ['#react-native', '#realm-db'],
+// 		img: require('./assets/freedom.png'),
+// 	},
+// 	{
+// 		name: 'Freedom - Personal Finance Tracker',
+// 		tags: ['#react-native', '#realm-db'],
+// 		img: require('./assets/freedom.png'),
+// 	},
+// ];
 
 const App = () => {
 	const [scrollHeight, setScrollHeight] = useState(0);
