@@ -25,9 +25,9 @@ import { TbBrandReactNative } from 'react-icons/tb';
 import { ImGit } from 'react-icons/im';
 import { AiOutlineConsoleSql } from 'react-icons/ai';
 
-import background from './assets/background.jpg';
-import logo_white from './assets/logo_white.png';
-import me from './assets/me.jpg';
+// import background from './assets/background.jpg';
+// import logo_white from './assets/logo_white.png';
+// import me from './assets/me.jpg';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 
@@ -165,26 +165,27 @@ const projects = [
 		name: 'Freedom - Personal Finance Tracker',
 		color: '#3F9569',
 		tags: ['#react-native', '#realm-db'],
-		img: require('./assets/freedom.png'),
+		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284888/simplefolio/freedom_l4lfk0.png',
 	},
 	{
 		name: 'Stadium Ticket Booking',
 		color: '#ffd700',
 		tags: ['#react', '#flask', '#sqlite'],
-		img: require('./assets/booking.png'),
+		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284921/simplefolio/booking_wchfdk.png',
 	},
 	{
 		name: 'Project Manager',
 		color: '#5c4bff',
 		tags: ['#react', '#mongodb', '#expressjs'],
-		img: require('./assets/pm.png'),
+		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284901/simplefolio/pm_j0eiuz.png',
 	},
 	{
 		name: 'Notera - Notes and ToDoList',
 		color: '#4834d4',
 		tags: ['#react-native', '#realm-db'],
-		img: require('./assets/notera.png'),
+		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284853/simplefolio/notera_bbndri.png',
 	},
+
 ];
 
 const App = () => {
@@ -208,7 +209,7 @@ const App = () => {
 				className="top-part"
 				style={{ backgroundPositionY: `${scrollHeight}px` }}>
 				<div className="topbar">
-					<img src={logo_white} alt="logo_white" />
+					<img src={'https://res.cloudinary.com/breivaco/image/upload/v1676284851/simplefolio/logo_white_e6vxsr.png'} alt="logo_white" />
 
 					<a
 						className="sayhello"
@@ -218,7 +219,7 @@ const App = () => {
 				</div>
 				<div className="top-part-content">
 					<div className="me">
-						<img src={me} alt="brian" />
+						<img src={'https://res.cloudinary.com/breivaco/image/upload/v1676284855/simplefolio/me_yp3wi2.jpg'} alt="brian" />
 					</div>
 
 					<p className="name">Brian Kalusi</p>
@@ -260,7 +261,7 @@ const Container = styled.div`
 	}
 	.top-part {
 		position: relative;
-		background-image: url(${background});
+		background-image: url('https://res.cloudinary.com/breivaco/image/upload/v1676284866/simplefolio/background_qqapd8.jpg');
 		background-size: cover;
 		background-attachment: fixed;
 		width: 100%;
