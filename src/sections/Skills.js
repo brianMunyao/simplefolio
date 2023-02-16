@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Skill from '../components/Skill';
 
 const Skills = ({ skills }) => {
 	return (
@@ -13,42 +14,35 @@ const Skills = ({ skills }) => {
 
 			<div className="skills">
 				{skills.map((p, i) => (
-					<Skill
-						key={i}
-						className="skill"
-						textColor={p.textColor}
-						backColor={p.backColor}>
-						<p.Logo />
-						{p.name}
-					</Skill>
+					<Skill key={i} tag={p.tag} />
 				))}
 			</div>
 		</Container>
 	);
 };
 
-const Skill = styled.div`
-	background: #eaeaea;
-	color: #474747;
-	margin: 15px 10px;
-	padding: 10px;
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.15s linear;
-	user-select: none;
+// const Skill = styled.div`
+// 	background: #eaeaea;
+// 	color: #474747;
+// 	margin: 15px 10px;
+// 	padding: 10px;
+// 	border-radius: 10px;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	transition: all 0.15s linear;
+// 	user-select: none;
 
-	svg {
-		margin-right: 6px;
-		font-size: 18px;
-	}
+// 	svg {
+// 		margin-right: 6px;
+// 		font-size: 18px;
+// 	}
 
-	&:hover {
-		background: ${({ backColor }) => backColor};
-		color: ${({ textColor }) => textColor};
-	}
-`;
+// 	&:hover {
+// 		background: ${({ backColor }) => backColor};
+// 		color: ${({ textColor }) => textColor};
+// 	}
+// `;
 
 const Container = styled.div`
 	margin: 20px 0 70px;

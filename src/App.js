@@ -20,6 +20,8 @@ import {
 	SiPhp,
 	SiTypescript,
 	SiVisualstudiocode,
+	SiSqlite,
+	SiRealm,
 } from 'react-icons/si';
 import { TbBrandReactNative } from 'react-icons/tb';
 import { ImGit } from 'react-icons/im';
@@ -158,34 +160,63 @@ const skills = [
 		backColor: '#218bea',
 		textColor: '#ffffff',
 	},
+	{
+		Logo: SiSqlite,
+		name: 'SQLite',
+		tag: '#sqlite',
+		backColor: '#044a5d',
+		textColor: '#8ecbff',
+	},
+	{
+		Logo: SiRealm,
+		name: 'Realm DB',
+		tag: '#realm-db',
+		backColor: '#7056bc',
+		textColor: '#e9e9e9',
+	},
 ];
 
 const projects = [
 	{
-		name: 'Freedom - Personal Finance Tracker',
-		color: '#3F9569',
-		tags: ['#react-native', '#realm-db'],
+		name: 'Parky - Parking Management System',
+		color: '#FFD036',
+		tags: ['#reactnative', '#react', '#flask', '#jupyter', '#postgresql'],
+		description:
+			'Smart parking management system using deep learning for real-time parking availability, integrated with mpesa for payments, accessible via web and mobile platforms.',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284888/simplefolio/freedom_l4lfk0.png',
 	},
 	{
 		name: 'Stadium Ticket Booking',
 		color: '#ffd700',
 		tags: ['#react', '#flask', '#sqlite'],
+		description:
+			'A web-based application allows users to easily browse upcoming events and securely purchase tickets online, ensuring a seamless and stress-free experience.',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284921/simplefolio/booking_wchfdk.png',
+	},
+	{
+		name: 'Freedom - Personal Finance Tracker',
+		color: '#3F9569',
+		tags: ['#reactnative', '#realm-db'],
+		description:
+			"A personal finance mobile app that offers expense tracking, budgeting, and financial decision-making tools to enhance users' financial health and well-being.",
+		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284888/simplefolio/freedom_l4lfk0.png',
 	},
 	{
 		name: 'Project Manager',
 		color: '#5c4bff',
 		tags: ['#react', '#mongodb', '#expressjs'],
+		description:
+			'A project management platform like monday.com that streamlines workflows, improves collaboration, and provides customizable tools for tracking progress',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284901/simplefolio/pm_j0eiuz.png',
 	},
 	{
 		name: 'Notera - Notes and ToDoList',
 		color: '#4834d4',
-		tags: ['#react-native', '#realm-db'],
+		tags: ['#reactnative', '#realm-db'],
+		description:
+			'Notera is an intuitive and user-friendly productivity app that lets you take notes, create to-do lists, and effortlessly organize tasks all in one place.',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284853/simplefolio/notera_bbndri.png',
 	},
-
 ];
 
 const App = () => {
@@ -209,7 +240,12 @@ const App = () => {
 				className="top-part"
 				style={{ backgroundPositionY: `${scrollHeight}px` }}>
 				<div className="topbar">
-					<img src={'https://res.cloudinary.com/breivaco/image/upload/v1676284851/simplefolio/logo_white_e6vxsr.png'} alt="logo_white" />
+					<img
+						src={
+							'https://res.cloudinary.com/breivaco/image/upload/v1676284851/simplefolio/logo_white_e6vxsr.png'
+						}
+						alt="logo_white"
+					/>
 
 					<a
 						className="sayhello"
@@ -219,7 +255,12 @@ const App = () => {
 				</div>
 				<div className="top-part-content">
 					<div className="me">
-						<img src={'https://res.cloudinary.com/breivaco/image/upload/v1676284855/simplefolio/me_yp3wi2.jpg'} alt="brian" />
+						<img
+							src={
+								'https://res.cloudinary.com/breivaco/image/upload/v1676284855/simplefolio/me_yp3wi2.jpg'
+							}
+							alt="brian"
+						/>
 					</div>
 
 					<p className="name">Brian Kalusi</p>
@@ -351,9 +392,9 @@ const Container = styled.div`
 	.subtitle {
 		text-align: center;
 		font-size: 18px;
-		font-weight: 300;
 		width: 50%;
 		margin: 35px auto;
+		font-weight: 300;
 		opacity: 0.7;
 		letter-spacing: 0.4px;
 		line-height: 30px;
