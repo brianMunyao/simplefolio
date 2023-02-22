@@ -200,6 +200,8 @@ const projects = [
 		description:
 			"A personal finance mobile app that offers expense tracking, budgeting, and financial decision-making tools to enhance users' financial health and well-being.",
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284888/simplefolio/freedom_l4lfk0.png',
+
+		link: 'https://com-bmksoftware-freedom.en.uptodown.com/',
 	},
 	{
 		name: 'Project Manager',

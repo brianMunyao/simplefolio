@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Skill from '../components/Skill';
 
+import download from '../assets/Uptodown.png';
+
 const Projects = ({ projects }) => {
 	return (
 		<Container>
@@ -17,6 +19,16 @@ const Projects = ({ projects }) => {
 						<p className="project-name">{p.name}</p>
 
 						<p className="project-desc">{p.description}</p>
+
+						{p.link && (
+							<a href={p.link}>
+								<img
+									className="img"
+									src={download}
+									alt="download"
+								/>
+							</a>
+						)}
 
 						<div className="project-tags">
 							{p.tags.map((tag, i) => (
@@ -91,6 +103,10 @@ const Container = styled.div`
 				flex-wrap: wrap;
 				justify-content: left;
 			}
+			.img {
+				margin-bottom: 15px;
+				height: 40px;
+			}
 		}
 
 		.project {
@@ -140,7 +156,7 @@ const Container = styled.div`
 		}
 	}
 
-	@media (max-width: 470px) {
+	@media (max-width: 650px) {
 		.projects {
 			grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 			/* grid-auto-rows: 290px; */
