@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/simplefolio/static/css/main.f3e78f16.css",
-    "main.js": "/simplefolio/static/js/main.7fb8901f.js",
+    "main.css": "/simplefolio/static/css/main.06598aea.css",
+    "main.js": "/simplefolio/static/js/main.b71b9af8.js",
     "static/js/787.09ceaf3e.chunk.js": "/simplefolio/static/js/787.09ceaf3e.chunk.js",
+    "static/media/slick.svg": "/simplefolio/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/simplefolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/simplefolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/simplefolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/simplefolio/index.html",
-    "main.f3e78f16.css.map": "/simplefolio/static/css/main.f3e78f16.css.map",
-    "main.7fb8901f.js.map": "/simplefolio/static/js/main.7fb8901f.js.map",
+    "main.06598aea.css.map": "/simplefolio/static/css/main.06598aea.css.map",
+    "main.b71b9af8.js.map": "/simplefolio/static/js/main.b71b9af8.js.map",
     "787.09ceaf3e.chunk.js.map": "/simplefolio/static/js/787.09ceaf3e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3e78f16.css",
-    "static/js/main.7fb8901f.js"
+    "static/css/main.06598aea.css",
+    "static/js/main.b71b9af8.js"
   ]
 }
