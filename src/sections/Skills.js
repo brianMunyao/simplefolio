@@ -21,29 +21,6 @@ const Skills = ({ skills }) => {
 	);
 };
 
-// const Skill = styled.div`
-// 	background: #eaeaea;
-// 	color: #474747;
-// 	margin: 15px 10px;
-// 	padding: 10px;
-// 	border-radius: 10px;
-// 	display: flex;
-// 	align-items: center;
-// 	justify-content: center;
-// 	transition: all 0.15s linear;
-// 	user-select: none;
-
-// 	svg {
-// 		margin-right: 6px;
-// 		font-size: 18px;
-// 	}
-
-// 	&:hover {
-// 		background: ${({ backColor }) => backColor};
-// 		color: ${({ textColor }) => textColor};
-// 	}
-// `;
-
 const Container = styled.div`
 	margin: 20px 0 70px;
 

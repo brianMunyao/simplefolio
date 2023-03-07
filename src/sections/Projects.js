@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Skill from '../components/Skill';
 
 import download from '../assets/Uptodown.png';
+import { Link } from 'react-router-dom';
 
 const Projects = ({ projects }) => {
 	return (
@@ -15,49 +16,38 @@ const Projects = ({ projects }) => {
 
 			<div className="projects">
 				{projects.map((p, i) => (
-					<div className="new-project" key={i}>
-						<p className="project-name">{p.name}</p>
+					<Link to={p.to} state={p}>
+						<div className="new-project" key={i}>
+							<p className="project-name">{p.name}</p>
 
-						<p className="project-desc">{p.description}</p>
+							<p className="project-desc">{p.description}</p>
 
-						{p.link && (
-							<a href={p.link}>
-								<img
-									className="img"
-									src={download}
-									alt="download"
-								/>
-							</a>
-						)}
+							{p.link && (
+								<a href={p.link}>
+									<img
+										className="img"
+										src={download}
+										alt="download"
+									/>
+								</a>
+							)}
 
-						<div className="project-tags">
-							{p.tags.map((tag, i) => (
-								<Skill key={i} tag={tag} brief={true} />
-							))}
+							<div className="project-tags">
+								{p.tags.map((tag, i) => (
+									<Skill key={i} tag={tag} brief={true} />
+								))}
+							</div>
 						</div>
-					</div>
+					</Link>
 				))}
 			</div>
-			{/* <div className="projects">
-				{projects.map((p, i) => (
-					<div
-						className="project"
-						style={{ background: p.color }}
-						key={i}>
-						<img src={p.img} alt={p.name} />
-
-						<div className="project-detail">{p.name}</div>
-					</div>
-				))}
-			</div> */}
 		</Container>
 	);
 };
 
 const Container = styled.div`
-	/* min-height: 100vh; */
-	background: #f2fbfa;
-	padding: 0 0 70px;
+	border-top: 2px solid #f6f6f6;
+	padding: 0 0 20px;
 	.p-title {
 		padding: 70px 0 10px;
 	}
@@ -69,20 +59,21 @@ const Container = styled.div`
 		column-gap: 40px;
 		row-gap: 60px;
 		padding: 10px 150px;
-		/* transition: all 0.2s linear; */
 
 		.new-project {
-			background: #f3fbfa;
+			cursor: pointer;
+			/* background: #f3fbfa; */
 			width: 100%;
 			box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
-			height: fit-content;
-			border-radius: 17px;
-			border: 2px solid #ccefeb;
+			height: 100%;
+			/* height: fit-content; */
+			border-radius: 10px;
+			border: 1.5px solid #ebebeb;
 			padding: 20px;
 			transition: all 0.2s linear;
 
 			&:hover {
-				box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+				box-shadow: rgba(0, 0, 0, 0.13) 0px 2px 8px;
 			}
 
 			.project-name {
@@ -108,52 +99,6 @@ const Container = styled.div`
 				height: 40px;
 			}
 		}
-
-		.project {
-			position: relative;
-			background: #f5f5f5;
-			width: 350px;
-			height: 100%;
-			border-radius: 10px;
-			overflow: hidden;
-			margin: auto;
-			box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-			border-radius: 10px;
-			transition: all 0.2s linear;
-			cursor: pointer;
-
-			img {
-				width: 100%;
-				height: 100%;
-			}
-			.project-detail {
-				transition: all 0.2s linear;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				height: 0;
-				overflow: none;
-				padding: 0 10px;
-				background: linear-gradient(
-					#ffffff16,
-					#ffffff8c,
-					#ffffffb9,
-					#ffffff,
-					#ffffff
-				);
-			}
-
-			&:hover {
-				transform: scale(1.05);
-				box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-
-				.project-detail {
-					height: auto;
-					padding: 10px;
-				}
-			}
-		}
 	}
 
 	@media (max-width: 650px) {
@@ -161,11 +106,7 @@ const Container = styled.div`
 			grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 			/* grid-auto-rows: 290px; */
 			row-gap: 40px;
-			padding: 10px;
-
-			.project {
-				width: 290px;
-			}
+			padding: 10px 30px;
 		}
 	}
 `;

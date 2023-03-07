@@ -1,180 +1,14 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import {
-	IoLogoCss3,
-	IoLogoDocker,
-	IoLogoGithub,
-	IoLogoHtml5,
-	IoLogoJavascript,
-	IoLogoLinkedin,
-	IoLogoPython,
-	IoLogoReact,
-	IoLogoTwitter,
-} from 'react-icons/io5';
-import { DiJava, DiPostgresql } from 'react-icons/di';
-import {
-	SiExpress,
-	SiFlask,
-	SiJupyter,
-	SiMongodb,
-	SiPhp,
-	SiTypescript,
-	SiVisualstudiocode,
-	SiSqlite,
-	SiRealm,
-} from 'react-icons/si';
-import { TbBrandReactNative } from 'react-icons/tb';
-import { ImGit } from 'react-icons/im';
-import { AiOutlineConsoleSql } from 'react-icons/ai';
+import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
 
 // import background from './assets/background.jpg';
 // import logo_white from './assets/logo_white.png';
 // import me from './assets/me.jpg';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
-
-const skills = [
-	{
-		Logo: IoLogoHtml5,
-		name: 'HTML',
-		tag: '#html',
-		backColor: '#f75421',
-		textColor: '#f2f2f2',
-	},
-	{
-		Logo: IoLogoCss3,
-		name: 'CSS',
-		tag: '#css',
-		backColor: '#2194f0',
-		textColor: '#f4f4f4',
-	},
-	{
-		Logo: IoLogoJavascript,
-		name: 'JavaScript',
-		tag: '#javascript',
-		backColor: '#F0DB4F',
-		textColor: '#ffffff',
-	},
-	{
-		Logo: IoLogoReact,
-		name: 'React',
-		tag: '#react',
-		backColor: '#282c34',
-		textColor: '#61DAFB',
-	},
-	{
-		Logo: SiTypescript,
-		name: 'TypeScript',
-		tag: '#typescript',
-		backColor: '#007ACC',
-		textColor: '#FFF',
-	},
-	{
-		Logo: TbBrandReactNative,
-		name: 'React Native',
-		tag: '#reactnative',
-		backColor: '#282c34',
-		textColor: '#61DAFB',
-	},
-	{
-		Logo: IoLogoPython,
-		name: 'Python',
-		tag: '#python',
-		backColor: '#ffde57',
-		textColor: '#3e7aab',
-	},
-	{
-		Logo: SiPhp,
-		name: 'PHP',
-		tag: '#php',
-		backColor: '#7377ad',
-		textColor: '#e4e5ea',
-	},
-	{
-		Logo: AiOutlineConsoleSql,
-		name: 'SQL',
-		tag: '#sql',
-		backColor: '#0091df',
-		textColor: '#cae1f1',
-	},
-	{
-		Logo: DiPostgresql,
-		name: 'PostgreSQL',
-		tag: '#postgresql',
-		backColor: '#31648c',
-		textColor: '#fff',
-	},
-	{
-		Logo: SiMongodb,
-		name: 'Mongo DB',
-		tag: '#mongodb',
-		backColor: '#023430',
-		textColor: '#00ed64',
-	},
-	{
-		Logo: DiJava,
-		name: 'Java',
-		tag: '#java',
-		backColor: '#f09112',
-		textColor: '#507e9c',
-	},
-	{
-		Logo: SiFlask,
-		name: 'Flask',
-		tag: '#flask',
-		backColor: '#282828',
-		textColor: '#f7f7f7',
-	},
-	{
-		Logo: SiExpress,
-		name: 'Express.js',
-		tag: '#expressjs',
-		backColor: '#333333',
-		textColor: '#f6f6f6',
-	},
-	{
-		Logo: ImGit,
-		name: 'Git',
-		tag: '#git',
-		backColor: '#e84d31',
-		textColor: '#3b2c00',
-	},
-	{
-		Logo: SiVisualstudiocode,
-		name: 'VS Code',
-		tag: '#vscode',
-		backColor: '#1e97e8',
-		textColor: '#f6f6f6',
-	},
-	{
-		Logo: SiJupyter,
-		name: 'Jupyter Notebooks',
-		tag: '#jupyter',
-		backColor: '#eb7325',
-		textColor: '#616262',
-	},
-	{
-		Logo: IoLogoDocker,
-		name: 'Docker',
-		tag: '#docker',
-		backColor: '#218bea',
-		textColor: '#ffffff',
-	},
-	{
-		Logo: SiSqlite,
-		name: 'SQLite',
-		tag: '#sqlite',
-		backColor: '#044a5d',
-		textColor: '#8ecbff',
-	},
-	{
-		Logo: SiRealm,
-		name: 'Realm DB',
-		tag: '#realm-db',
-		backColor: '#7056bc',
-		textColor: '#e9e9e9',
-	},
-];
+import { skills } from './config/skills_data';
+import Footer from './components/Footer';
 
 const projects = [
 	{
@@ -184,6 +18,7 @@ const projects = [
 		description:
 			'Smart parking management system using deep learning for real-time parking availability, integrated with mpesa for payments, accessible via web and mobile platforms.',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284888/simplefolio/freedom_l4lfk0.png',
+		to: '/simplefolio/projects/parky',
 	},
 	{
 		name: 'Stadium Ticket Booking',
@@ -192,6 +27,7 @@ const projects = [
 		description:
 			'A web-based application allows users to easily browse upcoming events and securely purchase tickets online, ensuring a seamless and stress-free experience.',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284921/simplefolio/booking_wchfdk.png',
+		to: '/simplefolio/projects/booking',
 	},
 	{
 		name: 'Freedom - Personal Finance Tracker',
@@ -202,6 +38,13 @@ const projects = [
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284888/simplefolio/freedom_l4lfk0.png',
 
 		link: 'https://com-bmksoftware-freedom.en.uptodown.com/',
+		to: '/simplefolio/projects/freedom',
+		images: [
+			'https://res.cloudinary.com/breivaco/image/upload/v1678184517/simplefolio/group12_c0wlfu.png',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678184513/simplefolio/group7_giiypi.png',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678184513/simplefolio/group8_qcqpin.png',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678184511/simplefolio/group11_a7a0kd.png',
+		],
 	},
 	{
 		name: 'Project Manager',
@@ -210,15 +53,16 @@ const projects = [
 		description:
 			'A project management platform like monday.com that streamlines workflows, improves collaboration, and provides customizable tools for tracking progress',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284901/simplefolio/pm_j0eiuz.png',
+		to: '/simplefolio/projects/pm',
 	},
-	{
-		name: 'Notera - Notes and ToDoList',
-		color: '#4834d4',
-		tags: ['#reactnative', '#realm-db'],
-		description:
-			'Notera is an intuitive and user-friendly productivity app that lets you take notes, create to-do lists, and effortlessly organize tasks all in one place.',
-		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284853/simplefolio/notera_bbndri.png',
-	},
+	// {
+	// 	name: 'Notera - Notes and ToDoList',
+	// 	color: '#4834d4',
+	// 	tags: ['#reactnative', '#realm-db'],
+	// 	description:
+	// 		'Notera is an intuitive and user-friendly productivity app that lets you take notes, create to-do lists, and effortlessly organize tasks all in one place.',
+	// 	img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284853/simplefolio/notera_bbndri.png',
+	// },
 ];
 
 const App = () => {
@@ -288,6 +132,8 @@ const App = () => {
 			<Skills skills={skills} />
 
 			<Projects projects={projects} />
+
+			<Footer />
 		</Container>
 	);
 };
@@ -379,8 +225,12 @@ const Container = styled.div`
 			.links {
 				font-size: 28px;
 				margin: 28px 0 0;
-				* {
-					margin: 0 5px;
+				svg {
+					transition: all 0.1s linear;
+					margin: 0 10px;
+					&:hover {
+						transform: scale(1.2) rotate(-10deg);
+					}
 				}
 			}
 		}
@@ -402,7 +252,7 @@ const Container = styled.div`
 		line-height: 30px;
 	}
 
-	@media (max-width: 470px) {
+	@media (max-width: 600px) {
 		.top-part {
 			.topbar {
 				img {
