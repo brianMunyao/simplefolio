@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
 
-// import background from './assets/background.jpg';
-// import logo_white from './assets/logo_white.png';
-// import me from './assets/me.jpg';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import { skills } from './config/skills_data';
