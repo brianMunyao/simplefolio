@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { TbCircleChevronLeft } from 'react-icons/tb';
 import { FaCaretLeft, FaCaretRight } from 'react-icons/fa';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import Skill from '../components/Skill';
 import Footer from '../components/Footer';
