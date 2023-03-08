@@ -37,7 +37,7 @@ const Project = () => {
 
 			{state.images && (
 				<div className="screenshot-section">
-					<h1>Screenshots</h1>
+					<h2>Screenshots</h2>
 
 					<div className="img-list">
 						<Slider
@@ -46,8 +46,8 @@ const Project = () => {
 							infinite
 							speed={500}
 							autoplaySpeed={4000}
-							// slidesToScroll={1}
-							slidesToShow={2}
+							slidesToScroll={1}
+							{...state.sliderSettings}
 							prevArrow={<BasicArrow prev />}
 							nextArrow={<BasicArrow />}>
 							{state.images.map((img) => (
@@ -114,8 +114,9 @@ const Container = styled.div`
 		line-height: 70px;
 	}
 	h2 {
-		font-size: 20px;
-		margin: 40px 0 20px;
+		font-size: 35px;
+		margin: 50px 0 40px;
+		color: #2b2b2b;
 	}
 
 	.back-btn {
@@ -151,8 +152,8 @@ const Container = styled.div`
 			line-height: 30px;
 		}
 		.skills {
-			width: 70%;
-			margin: 20px auto;
+			width: 100%;
+			margin: 10px auto;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
@@ -160,11 +161,6 @@ const Container = styled.div`
 	}
 	.screenshot-section {
 		position: relative;
-		h1 {
-			font-size: 35px;
-			padding: 100px 10px 60px;
-			opacity: 0.6;
-		}
 
 		.slider {
 			/* overflow: hidden; */
@@ -203,6 +199,20 @@ const Container = styled.div`
 	@media (max-width: 650px) {
 		.title-section {
 			width: 80%;
+		}
+	}
+	@media (max-width: 550px) {
+		.title-section {
+			width: 90%;
+			h1 {
+				font-size: 35px;
+				line-height: 50px;
+				padding: 80px 10px 35px;
+			}
+		}
+		h2 {
+			font-size: 25px;
+			margin: 40px 0 20px;
 		}
 	}
 `;

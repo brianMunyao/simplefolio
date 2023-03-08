@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Skill from '../components/Skill';
-
-import download from '../assets/Uptodown.png';
 import { Link } from 'react-router-dom';
+
+import Skill from '../components/Skill';
+import download from '../assets/Uptodown.png';
 
 const Projects = ({ projects }) => {
 	return (
@@ -22,15 +22,15 @@ const Projects = ({ projects }) => {
 
 							<p className="project-desc">{p.description}</p>
 
+							{/* <a href={p.link}> */}
 							{p.link && (
-								<a href={p.link}>
-									<img
-										className="img"
-										src={download}
-										alt="download"
-									/>
-								</a>
+								<img
+									className="img"
+									src={download}
+									alt="download"
+								/>
 							)}
+							{/* </a> */}
 
 							<div className="project-tags">
 								{p.tags.map((tag, i) => (

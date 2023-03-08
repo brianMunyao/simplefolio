@@ -42,6 +42,24 @@ const projects = [
 			'https://res.cloudinary.com/breivaco/image/upload/v1678184513/simplefolio/group8_qcqpin.png',
 			'https://res.cloudinary.com/breivaco/image/upload/v1678184511/simplefolio/group11_a7a0kd.png',
 		],
+
+		sliderSettings: {
+			slidesToShow: 4,
+			responsive: [
+				{
+					breakpoint: 1150,
+					settings: { slidesToShow: 3 },
+				},
+				{
+					breakpoint: 880,
+					settings: { slidesToShow: 2 },
+				},
+				{
+					breakpoint: 630,
+					settings: { slidesToShow: 1 },
+				},
+			],
+		},
 	},
 	{
 		name: 'Project Manager',
