@@ -118,7 +118,7 @@ const Project = () => {
 
 					<div className="img-list">
 						<Slider
-							className="slider"
+							className="slider web-slider"
 							autoplay
 							infinite
 							speed={500}
@@ -263,6 +263,14 @@ const Container = styled.div`
 				margin: auto;
 				height: 500px;
 				/* width: 100%; */
+			}
+		}
+		.web-slider {
+			/* width: 100%; */
+			height: auto;
+			img {
+				height: auto;
+				width: 100%;
 			}
 		}
 		.project-tags {

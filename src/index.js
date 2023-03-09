@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+	createBrowserRouter,
+	redirect,
+	RouterProvider,
+	Navigate,
+} from 'react-router-dom';
 import ErrorPage from './pages/ErrorPage';
 import Project from './pages/Project';
 
 const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <Navigate replace to={'/simplefolio'} />,
+		errorElement: <ErrorPage />,
+	},
 	{
 		path: '/simplefolio',
 		element: <App />,
