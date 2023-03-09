@@ -16,6 +16,33 @@ const projects = [
 			'Smart parking management system using deep learning for real-time parking availability, integrated with mpesa for payments, accessible via web and mobile platforms.',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284888/simplefolio/freedom_l4lfk0.png',
 		to: '/simplefolio/projects/parky',
+		features: [
+			'Real-time updates to parking availability',
+			'Mpesa integration for secure and fast mobile payments',
+			'Automatic billing based on parking duration',
+			'Mobile app and web platform for easy access to parking information',
+			'Analytics and reporting for parking usage and revenue',
+		],
+		mobileImages: [
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350170/simplefolio/parky_rrm5so.png',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350166/simplefolio/parky_welcome_zmp718.jpg',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350168/simplefolio/User_View_dlhpow.jpg',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350165/simplefolio/Picture4_rvrzfe.png',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350164/simplefolio/parky_login_bbq0tj.jpg',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350165/simplefolio/parky_signup_tkchri.jpg',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350164/simplefolio/parky_home_tebxty.jpg',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350169/simplefolio/parky_addmoney_bk7dej.png',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350165/simplefolio/Picture31_vjz6bc.png',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350168/simplefolio/parky_parking1_fgu7d7.jpg',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678350166/simplefolio/parkky_profile_ldtfgw.jpg',
+		],
+		webImages: [
+			'https://res.cloudinary.com/breivaco/image/upload/v1678351874/simplefolio/parky_d_login_vvbswy.jpg',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678352779/simplefolio/new_3_d4uhwc.jpg',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678351874/simplefolio/parky_d_locations_iduuj3.jpg',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678352777/simplefolio/new_1_xftmjc.png',
+			'https://res.cloudinary.com/breivaco/image/upload/v1678352782/simplefolio/new_2_evp82t.png',
+		],
 	},
 	{
 		name: 'Stadium Ticket Booking',
@@ -36,30 +63,18 @@ const projects = [
 
 		link: 'https://com-bmksoftware-freedom.en.uptodown.com/',
 		to: '/simplefolio/projects/freedom',
-		images: [
+		features: [
+			'Expense tracking to gain insights into spending habits',
+			'Budgeting to set financial goals',
+			'User-friendly interface',
+			'Detailed expense reports',
+		],
+		mobileImages: [
 			'https://res.cloudinary.com/breivaco/image/upload/v1678184517/simplefolio/group12_c0wlfu.png',
 			'https://res.cloudinary.com/breivaco/image/upload/v1678184513/simplefolio/group7_giiypi.png',
 			'https://res.cloudinary.com/breivaco/image/upload/v1678184513/simplefolio/group8_qcqpin.png',
 			'https://res.cloudinary.com/breivaco/image/upload/v1678184511/simplefolio/group11_a7a0kd.png',
 		],
-
-		sliderSettings: {
-			slidesToShow: 4,
-			responsive: [
-				{
-					breakpoint: 1150,
-					settings: { slidesToShow: 3 },
-				},
-				{
-					breakpoint: 880,
-					settings: { slidesToShow: 2 },
-				},
-				{
-					breakpoint: 630,
-					settings: { slidesToShow: 1 },
-				},
-			],
-		},
 	},
 	{
 		name: 'Project Manager',
@@ -99,7 +114,8 @@ const App = () => {
 		<Container>
 			<div
 				className="top-part"
-				style={{ backgroundPositionY: `${scrollHeight}px` }}>
+				style={{ backgroundPositionY: `${scrollHeight}px` }}
+			>
 				<div className="topbar">
 					<img
 						src={
@@ -110,7 +126,8 @@ const App = () => {
 
 					<a
 						className="sayhello"
-						href="mailto:brianmunyao6@gmail.com">
+						href="mailto:brianmunyao6@gmail.com"
+					>
 						Say Hello
 					</a>
 				</div>

@@ -1,6 +1,6 @@
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { TbCircleChevronLeft } from 'react-icons/tb';
 import { FaCaretLeft, FaCaretRight } from 'react-icons/fa';
@@ -10,14 +10,53 @@ import Slider from 'react-slick';
 import Skill from '../components/Skill';
 import Footer from '../components/Footer';
 
+const mobileSliderSettings = {
+	slidesToShow: 4,
+	responsive: [
+		{
+			breakpoint: 1150,
+			settings: { slidesToShow: 3 },
+		},
+		{
+			breakpoint: 880,
+			settings: { slidesToShow: 2 },
+		},
+		{
+			breakpoint: 630,
+			settings: { slidesToShow: 1 },
+		},
+	],
+};
+const webSliderSettings = {
+	slidesToShow: 1,
+	// responsive: [
+	// 	{
+	// 		breakpoint: 1150,
+	// 		settings: { slidesToShow: 3 },
+	// 	},
+	// 	{
+	// 		breakpoint: 880,
+	// 		settings: { slidesToShow: 2 },
+	// 	},
+	// 	{
+	// 		breakpoint: 630,
+	// 		settings: { slidesToShow: 1 },
+	// 	},
+	// ],
+};
+
 const Project = () => {
 	let { state } = useLocation();
 	const navigate = useNavigate();
 
+	useEffect(() => {
+		document.querySelector('#con-id').scrollTo({ top: 10 });
+	}, []);
+
 	return !state ? (
 		<></>
 	) : (
-		<Container>
+		<Container id="con-id">
 			{/* <Link to={'/simplefolio'}> */}
 			<span className="back-btn" onClick={() => navigate(-1)}>
 				<TbCircleChevronLeft />
@@ -26,7 +65,19 @@ const Project = () => {
 
 			<div className="title-section">
 				<h1>{state.name}</h1>
-				<p className="project-title">{state.description}</p>
+				<p className="project-desc">{state.description}</p>
+
+				{state.features && (
+					<>
+						<h2 className="features-title">Features</h2>
+						<ul className="features">
+							{state.features.map((f) => (
+								<li>✅ {f}</li>
+							))}
+						</ul>
+					</>
+				)}
+
 				<h2>Technologies Used</h2>
 				<div className="skills">
 					{state.tags.map((p, i) => (
@@ -35,9 +86,9 @@ const Project = () => {
 				</div>
 			</div>
 
-			{state.images && (
+			{state.mobileImages && (
 				<div className="screenshot-section">
-					<h2>Screenshots</h2>
+					<h2>App Screenshots</h2>
 
 					<div className="img-list">
 						<Slider
@@ -47,10 +98,37 @@ const Project = () => {
 							speed={500}
 							autoplaySpeed={4000}
 							slidesToScroll={1}
-							{...state.sliderSettings}
+							{...mobileSliderSettings}
 							prevArrow={<BasicArrow prev />}
-							nextArrow={<BasicArrow />}>
-							{state.images.map((img) => (
+							nextArrow={<BasicArrow />}
+						>
+							{state.mobileImages.map((img) => (
+								<div className="img">
+									<img src={img} alt={img} />
+								</div>
+							))}
+						</Slider>
+					</div>
+				</div>
+			)}
+
+			{state.webImages && (
+				<div className="screenshot-section">
+					<h2>Web Screenshots</h2>
+
+					<div className="img-list">
+						<Slider
+							className="slider"
+							autoplay
+							infinite
+							speed={500}
+							autoplaySpeed={4000}
+							slidesToScroll={1}
+							{...webSliderSettings}
+							prevArrow={<BasicArrow prev />}
+							nextArrow={<BasicArrow />}
+						>
+							{state.webImages.map((img) => (
 								<div className="img">
 									<img src={img} alt={img} />
 								</div>
@@ -72,7 +150,8 @@ const BasicArrow = ({ prev, onClick }) => {
 			onClick={(e) => {
 				onClick();
 				e.stopPropagation();
-			}}>
+			}}
+		>
 			{prev ? <FaCaretLeft /> : <FaCaretRight />}
 		</Arrow>
 	);
@@ -114,8 +193,8 @@ const Container = styled.div`
 		line-height: 70px;
 	}
 	h2 {
-		font-size: 35px;
-		margin: 50px 0 40px;
+		font-size: 30px;
+		margin: 50px 0;
 		color: #2b2b2b;
 	}
 
@@ -141,11 +220,9 @@ const Container = styled.div`
 			padding: 100px 10px 60px;
 		}
 
-		.project-title {
+		.project-desc {
 			text-align: center;
 			font-size: 18px;
-			/* width: 100%; */
-			/* margin: 35px auto; */
 			font-weight: 300;
 			opacity: 0.7;
 			letter-spacing: 0.4px;
@@ -158,17 +235,33 @@ const Container = styled.div`
 			flex-wrap: wrap;
 			justify-content: center;
 		}
+		.features-title {
+			margin-bottom: 30px;
+		}
+		ul.features {
+			list-style: none;
+			li {
+				font-size: 17px;
+				font-weight: 300;
+				opacity: 0.7;
+				letter-spacing: 0.4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 10px;
+			}
+		}
 	}
 	.screenshot-section {
 		position: relative;
 
 		.slider {
 			/* overflow: hidden; */
-			height: 550px;
+			height: 500px;
 			margin-bottom: 20px;
 			img {
 				margin: auto;
-				height: 550px;
+				height: 500px;
 				/* width: 100%; */
 			}
 		}
