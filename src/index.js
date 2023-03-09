@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
 	createBrowserRouter,
-	redirect,
 	RouterProvider,
 	Navigate,
 } from 'react-router-dom';
