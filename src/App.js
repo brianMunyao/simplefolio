@@ -52,6 +52,11 @@ const projects = [
 			'A web-based application allows users to easily browse upcoming events and securely purchase tickets online, ensuring a seamless and stress-free experience.',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284921/simplefolio/booking_wchfdk.png',
 		to: '/simplefolio/projects/booking',
+		webImages:[
+			"https://res.cloudinary.com/breivaco/image/upload/v1679864215/simplefolio/booking_-_Asset_8_wkpzso.png",
+			"https://res.cloudinary.com/breivaco/image/upload/v1679864192/simplefolio/booking_-_Asset_10_vhc6j0.png",
+			"https://res.cloudinary.com/breivaco/image/upload/v1679864164/simplefolio/booking_-_Asset_9_wcbjco.png"
+		]
 	},
 	{
 		name: 'Freedom - Personal Finance Tracker',
@@ -84,6 +89,12 @@ const projects = [
 			'A project management platform like monday.com that streamlines workflows, improves collaboration, and provides customizable tools for tracking progress',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284901/simplefolio/pm_j0eiuz.png',
 		to: '/simplefolio/projects/pm',
+		webImages:{
+			"https://res.cloudinary.com/breivaco/image/upload/v1679864145/simplefolio/pm_-_Asset_6_obyzcp.png",
+			"https://res.cloudinary.com/breivaco/image/upload/v1679864142/simplefolio/pm_-_Asset_5_qpej4z.png",
+			"https://res.cloudinary.com/breivaco/image/upload/v1679864140/simplefolio/pm_-_Asset_4_rkp8yj.png",
+			"https://res.cloudinary.com/breivaco/image/upload/v1679864180/simplefolio/pm_-_Asset_7_qkwvzv.png"
+		}
 	},
 	// {
 	// 	name: 'Notera - Notes and ToDoList',
