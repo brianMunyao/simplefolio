@@ -89,12 +89,12 @@ const projects = [
 			'A project management platform like monday.com that streamlines workflows, improves collaboration, and provides customizable tools for tracking progress',
 		img: 'https://res.cloudinary.com/breivaco/image/upload/v1676284901/simplefolio/pm_j0eiuz.png',
 		to: '/simplefolio/projects/pm',
-		webImages:{
+		webImages:[
 			"https://res.cloudinary.com/breivaco/image/upload/v1679864145/simplefolio/pm_-_Asset_6_obyzcp.png",
 			"https://res.cloudinary.com/breivaco/image/upload/v1679864142/simplefolio/pm_-_Asset_5_qpej4z.png",
 			"https://res.cloudinary.com/breivaco/image/upload/v1679864140/simplefolio/pm_-_Asset_4_rkp8yj.png",
 			"https://res.cloudinary.com/breivaco/image/upload/v1679864180/simplefolio/pm_-_Asset_7_qkwvzv.png"
-		}
+		]
 	},
 	// {
 	// 	name: 'Notera - Notes and ToDoList',
